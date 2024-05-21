@@ -1,0 +1,1370 @@
+/* PEMBUNGKUS KONTEN START */
+.content-container {
+	height: 100vh;
+	width: 84%;
+	transition: all 0.5s;
+}
+
+/* INI KALO SIDEBAR CLOSE DIA MO JADI LEBE LEBAR, MENYESUAIKAN DENG SIDEBAR PE WIDTH */
+.content-container.lebih-lebar {
+	width: 94%;
+}
+
+/* PEMBUNGKUS KONTEN END */
+
+/* BAGIAN ATAS START */
+.content-head-container {
+	width: 100%;
+	height: 90px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.headline-for-all {
+	display: flex;
+	align-items: center;
+	width: 95%;
+	justify-content: space-between;
+}
+
+.headline-for-all i {
+	font-size: 20px;
+	background: #e1e8e6;
+	width: 3%;
+	text-align: center;
+	border-radius: 30px;
+	height: 35px;
+	line-height: 35px;
+	transition: all 0.5s;
+}
+
+.headline-for-all i:hover,
+.headline-for-all i.active {
+	color: white;
+	background: #46b5d1;
+	transition: all 0.5s ease-out;
+}
+
+.headline-for-all {
+	position: relative;
+}
+
+.head-notification-container {
+	width: 25%;
+	height: 200px;
+	background: #062c30;
+	position: absolute;
+	right: 0;
+	top: 100%;
+	line-height: 25px;
+	border-radius: 12px;
+	padding: 10px;
+	display: none;
+	opacity: 0;
+	z-index: 9;
+}
+
+.head-notification-container.active {
+	display: block;
+	opacity: 1;
+}
+
+.head-notification-container .isi-notifikasi p {
+	color: white;
+	font-size: 14px;
+}
+
+.head-notification-container .isi-notifikasi h5 {
+	font-size: 14px;
+}
+
+.head-notification-container a {
+	color: white;
+	text-decoration: underline;
+}
+
+/* BAGIAN ATAS END */
+
+/* BAGIAN SEARCH START */
+.search-table-container {
+	margin: 20px 0px;
+	width: 97%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.head-user-opd-container {
+	width: 97%;
+	margin: 0;
+	display: flex;
+	justify-content: space-between;
+	height: 40px;
+}
+
+.head-user-opd-container .tambah-edit-user-container {
+	width: 20%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.show-n-row-table {
+	display: flex;
+	padding-left: 30px;
+	width: 60%;
+}
+
+.show-n-row-table-pengukuran {
+	width: 80%;
+	display: flex;
+	align-items: center;
+	padding-left: 30px;
+	gap: 0.5rem;
+}
+
+.show-n-row-table-pengukuran form:first-of-type {
+	align-self: center;
+	display: flex;
+	width: 200px;
+	height: 20px;
+	gap: 0.25rem;
+}
+
+.show-n-row-table-pengukuran form {
+	align-self: center;
+	display: flex;
+	align-items: center;
+	width: 300px;
+	height: 20px;
+	gap: 0.25rem;
+}
+
+.show-n-row-table-evaluasi {
+	width: 40%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.show-n-row-table p,
+.show-n-row-table-evaluasi p {
+	font-size: 14px;
+}
+
+.show-n-row-table form,
+.show-n-row-table-evaluasi form {
+	display: flex;
+	padding-left: 15px;
+}
+
+.show-n-row-table form select,
+.show-n-row-table-evaluasi form select {
+	/* width: 30%; */
+	border: none;
+	border-bottom: 1px solid black;
+	outline: none;
+}
+
+.show-n-row-table input,
+.show-n-row-table-evaluasi input,
+.show-n-row-table-pengukuran input {
+	background: white;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	margin-left: 5px;
+	text-decoration: underline;
+	padding-left: 10px;
+}
+
+.search-table {
+	display: flex;
+	align-items: center;
+}
+
+.search-table-input {
+	border: none;
+	outline: none;
+	transition: all 0.5s;
+	border-radius: 10px;
+	padding-left: 5px;
+	width: 130px;
+}
+
+.search-table-input:focus {
+	box-shadow: 0 2px 2px #a3c8cd;
+}
+
+.search-table-container .search-table-submit,
+.search-table-container-pengukuran .search-table-submit {
+	padding: 2px;
+	background: none;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.search-table-container .search-table-submit:hover,
+.search-table-container-pengukuran .search-table-submit:hover {
+	background: #3d8361;
+	color: white;
+	border: 1px solid white;
+	cursor: pointer;
+}
+
+/* BAGIAN CONTENT START */
+
+.main-content-dashboard,
+.main-content-pelaporan-kinerja,
+.main-content-evaluasi-kinerja,
+.main-content-ubah-email-container,
+.main-content-dashboard-user,
+.main-content-perencanaan-kinerja,
+.main-content-pengukuran-kinerja,
+.main-content-profil-pengguna-container,
+.main-content-notification,
+.main-content-user-opd,
+.main-content-faq,
+.main-content-edit-data {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transition: all 0.5s;
+}
+
+/* ~~~BAGIAN DOKUMEN SAKIP USER START*/
+
+/* ---GENERAL (SEMUA KOMPONEN PAKE INI) */
+.wrapper-input-dokumen {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.wrapper-input-dokumen label {
+	padding-left: 15px;
+	/* align-self: flex-start; */
+	font-weight: 500;
+	margin-top: 10px;
+	font-size: 14px;
+}
+
+.wrapper-input-dokumen label.upload-file-dokumen {
+	width: 100%;
+	height: 35px;
+	border-radius: 8px;
+	background: #e1e8e6;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-right: 10px;
+	font-weight: 300;
+	font-size: 14px;
+	color: grey;
+	cursor: pointer;
+	margin: 0;
+	transition: all 0.5s;
+}
+
+.wrapper-input-dokumen .upload-file-dokumen:hover {
+	color: white;
+	background: grey;
+}
+
+.wrapper-input-dokumen label.upload-file-dokumen i {
+	color: black;
+}
+
+.wrapper-input-dokumen input.upload-input,
+.wrapper-input-dokumen select.upload-input {
+	width: 100%;
+	height: 35px;
+	border: none;
+	background: #e1e8e6;
+	outline: none;
+	padding-left: 15px;
+	font-size: 14px;
+	border-radius: 6px;
+}
+
+.wrapper-input-dokumen input[type="file"] {
+	display: none;
+}
+
+/* ---PERENCANAAN START */
+
+.main-content-perencanaan-kinerja .form-input-dokumen-perencanaan button,
+.main-content-pelaporan-kinerja .form-input-dokumen-pelaporan button,
+.main-content-pengukuran-kinerja .form-input-dokumen-pengukuran button {
+	margin-top: 50px;
+	border-radius: 8px;
+	padding: 5px;
+	height: 35px;
+	cursor: pointer;
+	width: 20%;
+	border: none;
+	outline: none;
+	background: #062c30;
+	color: white;
+	font-weight: 500;
+	align-self: flex-end;
+}
+
+/*  ---PENGUKURAN START */
+.search-table-container-pengukuran {
+	margin-bottom: 20px;
+	width: 97%;
+	display: flex;
+	align-items: center;
+
+}
+
+.form-pilih-tahun-pengukuran {
+	align-self: flex-start;
+	margin-left: 30px;
+}
+
+.form-pilih-tahun-pengukuran input {
+	border: none;
+	outline: none;
+	background: none;
+	text-decoration: underline;
+	cursor: pointer;
+	padding-left: 10px;
+}
+
+
+
+.modal-triwulan {
+	width: 50%;
+	height: 90%;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: white;
+	position: relative;
+}
+
+.modal-triwulan input,
+.modal-triwulan-user input {
+	border: none;
+	background: #e1e8e6;
+	text-align: center;
+	border-radius: 8px;
+	outline: none;
+	height: 25px;
+	width: 20%;
+	border-bottom: 2px solid black;
+	transition: all 0.5s;
+}
+
+.modal-triwulan input:focus {
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.modal-triwulan label,
+p {
+	font-weight: 500;
+}
+
+.head-modal-triwulan {
+	line-height: 60px;
+	text-align: center;
+	height: 60px;
+	background: rgba(0, 0, 0, 0.6);
+	width: 100%;
+	color: white;
+	font-size: 20px;
+	font-weight: 500;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.form-modal-triwulan {
+	margin: 15px;
+	width: 85%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	padding-left: 20px;
+}
+
+.unduh-dokumen-lakip-container {
+	display: flex;
+	flex-direction: column;
+	height: 15%;
+}
+
+.modal-triwulan a.unduh-dok-lakip {
+	background: #3d8361;
+	padding: 5px;
+	text-align: center;
+	border-radius: 8px;
+	color: white;
+	width: 20%;
+	border: 3px solid #3d8361;
+	transition: all 0.5s;
+}
+
+.modal-triwulan a.unduh-dok-lakip:hover {
+	border: 3px solid white;
+}
+
+.input-pengukuran-admin-container {
+	display: flex;
+	flex-direction: column;
+	margin: 5px 0px 5px 0px;
+}
+
+.tidak-tercapai-container {
+	height: 40%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.tidak-tercapai-container p {
+	width: 100%;
+}
+
+.tidak-tercapai-container .tidak-tercapai-indikator {
+	display: flex;
+	/* flex-direction: column; */
+	margin: 0px 5px 0px 5px;
+}
+
+.tidak-tercapai-container .tidak-tercapai-indikator label {
+	font-size: 14px;
+	font-weight: 300;
+	margin-right: 20px;
+}
+
+.tidak-tercapai-container label {
+	font-size: 14px;
+}
+
+.tercapai-melebihi-container {
+	display: flex;
+	margin-top: 20px;
+	width: 70%;
+}
+
+.tercapai-melebihi-container input {
+	width: 20%;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+button.btn-selesai-input-triwulan {
+	border: none;
+	outline: none;
+	padding: 5px;
+	background: #1c6758;
+	border-radius: 8px;
+	color: white;
+	cursor: pointer;
+	transition: all 0.5s;
+	border: 2px solid grey;
+	align-self: flex-end;
+	margin-top: 20px;
+}
+
+button.btn-selesai-input-triwulan:hover {
+	border: 2px solid white;
+}
+
+/* ^^^^ PENGUKURAN USER START */
+.pilih-lihat-upload-pengukuran-container {
+	margin-top: 20px;
+	width: 40%;
+	height: 5%;
+	display: flex;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.pilih-lihat-hasil-pengukuran.active {
+	background: #738b8d;
+	pointer-events: none;
+}
+
+.pilih-lihat-hasil-pengukuran {
+	width: 30%;
+	height: 35px;
+	background: #a3c8cd;
+	color: white;
+	border-radius: 10px 0px 0px 10px;
+	line-height: 35px;
+	text-align: center;
+	font-weight: 500;
+	pointer-events: visible;
+	transition: all 0.5s;
+}
+
+.pilih-lihat-hasil-pengukuran-content .btn-triwulan {
+	background: white;
+	border: 1px solid #1c6758;
+	margin: 10px;
+	padding: 5px;
+	border-radius: 8px;
+	transition: all 0.5s;
+	cursor: pointer;
+}
+
+.pilih-lihat-hasil-pengukuran-content .btn-triwulan:hover {
+	background: #1c6758;
+	color: white;
+	border: 1px solid #1c6758;
+	margin: 10px;
+	padding: 5px;
+	border-radius: 8px;
+}
+
+.pilih-upload-dokumen-pengukuran {
+	width: 30%;
+	height: 35px;
+	background: #a3c8cd;
+	color: white;
+	line-height: 35px;
+	text-align: center;
+	font-weight: 500;
+	border-radius: 0px 10px 10px 0px;
+	pointer-events: visible;
+	transition: all 0.5s;
+}
+
+.pilih-upload-dokumen-pengukuran.active {
+	background: #738b8d;
+	pointer-events: none;
+}
+
+.pilih-lihat-hasil-pengukuran-content {
+	opacity: 0;
+	display: none;
+}
+
+.pilih-lihat-hasil-pengukuran-content.active {
+	visibility: visible;
+	opacity: 1;
+	display: block;
+}
+
+.modal-triwulan-user {
+	width: 40%;
+	height: 60%;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: white;
+	position: relative;
+}
+
+.btn-triwulan.point-none {
+	pointer-events: none;
+}
+
+.pilih-btn-triwulan {
+	padding: 4px;
+	border-radius: 8px;
+	cursor: pointer;
+	color: #3d8361;
+	background: white;
+	border: 2px solid #3d8361;
+	transition: all 0.5s;
+	margin: 0px 5px 0px 5px;
+}
+
+.pilih-btn-triwulan.active {
+	color: white;
+	background: #3d8361;
+	border: 2px solid #3d8361;
+}
+
+.content-modal-triwulan-user {
+	margin: 15px;
+	width: 55%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	padding-left: 20px;
+}
+
+.tidak-tercapai-user-container {
+	height: 50%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.tidak-tercapai-user-container .tidak-tercapai-indikator {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.tidak-tercapai-user-container .tidak-tercapai-indikator input {
+	margin-left: 10px;
+}
+
+.tercapai-melebihi-container {
+	width: 80%;
+}
+
+.tidak-tercapai-user-container .tercapai-melebihi-container input {
+	width: 50%;
+}
+
+.pengukuran-kinerja-container .form-input-dokumen-pengukuran {
+	visibility: hidden;
+	opacity: 0;
+	display: none;
+}
+
+.pengukuran-kinerja-container .form-input-dokumen-pengukuran.active {
+	visibility: visible;
+	opacity: 1;
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+}
+
+.form-in .hasil-pengukuran-container label,
+.tidak-tercapai-user-container p,
+.tercapai-melebihi-container label {
+	font-weight: 700;
+}
+
+/* ^^^^ PENGUKURAN USER END */
+
+/*  ---PENGUKURAN END */
+
+/* EVALUASI ADMIN START */
+.form-input-evaluasi-admin {
+	display: flex;
+	justify-content: center;
+}
+
+.form-input-evaluasi-admin .input-file-evaluasi-container {
+	width: 50%;
+	margin-right: 10px;
+	height: 30px;
+}
+
+.form-input-evaluasi-admin input[type="file"] {
+	display: none;
+}
+
+.form-input-evaluasi-admin label.up-file-evaluasi {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: none;
+	padding: 8px;
+	border-radius: 10px;
+	font-size: 12px;
+	cursor: pointer;
+	transition: all 0.5s;
+	height: 30px;
+}
+
+.form-input-evaluasi-admin label.up-file-evaluasi:hover {
+	background: lightgray;
+	color: black;
+}
+
+.form-input-evaluasi-admin label.up-file-evaluasi:hover i {
+	color: black;
+}
+
+.form-pilih-tahun-evaluasi {
+	/* background: lightgreen; */
+	align-self: flex-start;
+	margin-left: 30px;
+	font-size: 14px;
+	display: flex;
+}
+
+.form-pilih-tahun-evaluasi select,
+.form-pilih-tahun-pengukuran select,
+.form-pilih-triwulan select {
+	border: none;
+	outline: none;
+	border-bottom: 1px solid black;
+	/* padding-left: 10px; */
+	margin-left: 10px;
+}
+
+
+/* EVALUASI ADMIN END */
+
+/*~~~ BAGIAN DOKUMEN SAKIP USER END */
+
+/* ---BAGIAN INFORMASI START */
+.main-content-informasi,
+.main-content-informasi-user {
+	height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.daftar-pesan-terkirim {
+	width: 50%;
+	padding: 10px 20px 10px 20px;
+	background: #062c30;
+	border-radius: 10px;
+	height: inherit;
+	display: flex;
+	flex-direction: column;
+}
+
+.the-base {
+	margin-left: 20px;
+	border-radius: 10px;
+	width: 55%;
+	height: 80vh;
+	background: #062c30;
+	overflow: scroll;
+	overflow-y: auto;
+	display: flex;
+}
+
+.daftar-pesan-terkirim,
+.daftar-pesan-diterima-user {
+	width: 100%;
+	padding: 10px 20px 10px 20px;
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.tidak-ada-pesan {
+	height: 100%;
+	color: whitesmoke;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.pesan-terkirim,
+.pesan-diterima {
+	line-height: 25px;
+}
+
+.pesan-terkirim p,
+.pesan-diterima p {
+	font-size: 14px;
+	color: white;
+}
+
+.pesan-terkirim h5.user-pengirim small {
+	color: #46b5d1;
+}
+
+.pesan-terkirim h5.user-pengirim,
+.pesan-diterima h5.user-pengirim {
+	font-size: 14px;
+	color: white;
+	word-spacing: 2px;
+}
+
+.pesan-terkirim h5,
+.pesan-diterima h5 {
+	color: grey;
+}
+
+form.form-kirim-pesan-admin {
+	width: 50%;
+	height: inherit;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.form-kirim-pesan-admin textarea {
+	border: none;
+	outline: none;
+	padding: 20px;
+	margin-bottom: 30px;
+	border-radius: 15px;
+	background: #e1e8e6;
+	width: 90%;
+	transition: all 0.5s;
+	resize: none;
+}
+
+.form-kirim-pesan-admin textarea:focus {
+	box-shadow: 3px 3px 2px 2px #a3c8cd;
+}
+
+.form-kirim-pesan-admin .input-file-informasi-container {
+	width: 60%;
+	align-self: flex-start;
+	padding-left: 35px;
+}
+
+.form-kirim-pesan-admin input[type="file"] {
+	display: none;
+}
+
+.form-kirim-pesan-admin label.upload-file-informasi {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #e1e8e6;
+	padding: 8px;
+	border-radius: 10px;
+	font-size: 14px;
+	cursor: pointer;
+	transition: all 0.5s;
+	width: 100%;
+}
+
+.form-kirim-pesan-admin .upload-file-informasi:hover {
+	background: grey;
+	color: white;
+}
+
+.form-kirim-pesan-admin .btn-kirim-informasi {
+	border: none;
+	outline: none;
+	border-radius: 10px;
+	background: #062c30;
+	width: 12%;
+	font-size: 14px;
+	height: 32px;
+	color: white;
+	align-self: flex-end;
+	margin-right: 35px;
+	cursor: pointer;
+	margin-top: 20px;
+	transition: all 0.5s;
+}
+
+.form-kirim-pesan-admin .btn-kirim-informasi:hover {
+	background: #46b5d1;
+}
+
+.form-kirim-pesan-admin select {
+	align-self: flex-start;
+	margin-left: 35px;
+	margin-bottom: 20px;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid black;
+	width: 35%;
+}
+
+.form-kirim-pesan-admin option {
+	background: #e1e8e6;
+}
+
+/* ---BAGIAN INFORMASI END */
+
+/* BAGIAN PROFILE PENGGUNA (PENGATURAN) START*/
+
+.penjelasan-singkat {
+	padding-left: 30px;
+	margin-bottom: 20px;
+}
+
+.form-profil-pengguna {
+	width: 60%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	/* padding: 40px; */
+	border-radius: 20px;
+	margin: 0;
+	/* scroll-behavior: smooth; */
+}
+
+.form-profil-pengguna input {
+	height: 35px;
+	border-radius: 8px;
+	background: #e1e8e6;
+	border: none;
+	outline: none;
+	padding-left: 20px;
+	transition: all 0.5s;
+}
+
+.form-profil-pengguna input:focus {
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.form-profil-pengguna .input-pengaturan-wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+}
+
+.form-profil-pengguna label:first-of-type {
+	margin-top: 0px;
+}
+
+.form-profil-pengguna label {
+	font-size: 14px;
+	font-weight: 700;
+	margin-top: 25px;
+	margin-bottom: 2px;
+	color: #062c30;
+}
+
+.form-profil-pengguna .input-pengaturan-wrapper button {
+	width: 60%;
+	align-self: flex-end;
+	margin-top: 50px;
+	padding: 7px;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	background: #1c6758;
+	color: white;
+	transition: all 0.5s;
+}
+
+.form-profil-pengguna .input-pengaturan-wrapper button:hover {
+	background-color: #46b5d1;
+	box-shadow: 4px 8px 30px rgba(23, 201, 213, 0.2);
+}
+
+/* BAGIAN PROFILE PENGGUNA (PENGATURAN) END */
+
+/* BAGIAN USER OPD (PENGATURAN) START */
+.btn-tambah-user {
+	margin-left: 40px;
+}
+
+.main-content-user-opd button,
+.main-content-user-opd a,
+.main-content-edit-data button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	outline: none;
+	background: #1c6758;
+	border-radius: 8px;
+	color: white;
+	cursor: pointer;
+	transition: all 0.5s;
+	border: 2px solid grey;
+	height: 35px;
+	width: 40%;
+	font-size: 12px;
+}
+
+.main-content-user-opd button:hover,
+.main-content-edit-data button:hover,
+.main-content-user-opd a:hover {
+	border: 2px solid white;
+}
+
+.main-content-user-opd button.btn-edit-user {
+	background: #3d8361;
+}
+
+.main-content-user-opd button.btn-block-user {
+	background: red;
+	width: 50%;
+	margin: auto;
+}
+
+.modal {
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s, opacity 0s;
+	background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-tambah-user-container.active,
+.modal-edit-user-container.active,
+.modal-lupa-password-container.active,
+.modal-block-user-container.active,
+.modal-triwulan-1-container.active,
+.modal-triwulan-2-container.active,
+.modal-triwulan-3-container.active,
+.modal-triwulan-4-container.active {
+	visibility: visible;
+	opacity: 1;
+	background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-tambah-user,
+.modal-edit-user {
+	background: white;
+	border-radius: 10px;
+	height: 50%;
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* justify-content: center; */
+	position: relative;
+}
+
+.modal-lupa-password {
+	width: 30%;
+	height: 30%;
+	background: white;
+	border-radius: 10px;
+}
+
+.form-modal-block-user {
+	height: 12%;
+	width: 24%;
+	background: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: 10px;
+}
+
+.form-modal-block-user h3 {
+	font-size: 16px;
+	text-align: center;
+	margin: 12px;
+}
+
+.btn-ya-tidak-block-container {
+	width: 100%;
+	/* display: block; */
+	display: flex;
+	justify-content: center;
+}
+
+.form-modal-block-user .btn-ya-block {
+	background: red;
+	width: 50%;
+	border: none;
+	outline: none;
+	border: 2px solid red;
+	border-radius: 0px;
+	border-bottom-left-radius: 8px;
+}
+
+.form-modal-block-user .btn-tidak-block {
+	background: grey;
+	width: 50%;
+	border: none;
+	outline: none;
+	border: 2px solid grey;
+	border-radius: 0px;
+	border-bottom-right-radius: 8px;
+}
+
+.modal-pengaturan h3 {
+	color: black;
+}
+
+.head-modal-tambah-user {
+	height: 50px;
+	line-height: 50px;
+}
+
+.form-tambah-user {
+	display: flex;
+	flex-direction: column;
+	/* align-items: center; */
+	/* justify-content: space-around; */
+	height: 90%;
+	width: 60%;
+}
+
+.form-tambah-user input,
+.form-tambah-user select {
+	width: 100%;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid black;
+}
+
+.form-tambah-user select {
+	margin-top: 10px;
+}
+
+.form-tambah-user button {
+	align-self: flex-end;
+	margin-top: 20px;
+	width: 25%;
+}
+
+.form-edit-user {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 40%;
+	margin-top: 40px;
+	height: 30%;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.form-edit-user.active {
+	opacity: 1;
+	visibility: visible;
+}
+
+.form-edit-user input {
+	border: none;
+	outline: none;
+	border-bottom: 2px solid grey;
+	width: 60%;
+	height: 25px;
+	padding-left: 10px;
+}
+
+.modal-pengaturan input:focus,
+.form-edit-user input:focus {
+	box-shadow: 0 2px 2px #a3c8cd;
+}
+
+.modal-pengaturan label {
+	align-self: flex-start;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-weight: 500;
+	font-size: 14px;
+}
+
+/* 
+.modal-pengaturan select,
+.form-edit-user select {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid black;
+    margin-top: 10px;
+    width: 60%;
+} */
+
+.modal-pengaturan option,
+.form-edit-user option {
+	background: #e1e8e6;
+}
+
+.modal-close {
+	position: absolute;
+	top: 3%;
+	right: 3%;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+/* ~~~BAGIAN EDIT USER START*/
+
+.pilih-user-opd {
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+	height: 5%;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	border-style: dotted;
+}
+
+.pilih-user-opd label {
+	cursor: pointer;
+	height: 100%;
+	padding: 10px;
+}
+
+.pilih-user-opd span {
+	/* border: 2px solid white; */
+	font-size: 14px;
+	cursor: pointer;
+	border-radius: 8px;
+}
+
+.pilih-user-opd span.active,
+.pilih-user-opd span:hover {
+	background: #062c30;
+	border-radius: 8px;
+}
+
+.pilih-user-opd span.active label,
+.pilih-user-opd span:hover label {
+	color: white;
+}
+
+.pilih-user-opd ul.daftar-user {
+	background: #062c30;
+	width: 40%;
+	border-radius: 8px;
+	position: absolute;
+	top: 0%;
+	right: 0%;
+	height: 150px;
+	overflow: hidden;
+	overflow-y: visible;
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.pilih-user-opd ul.daftar-user.active {
+	visibility: visible;
+	opacity: 1;
+	pointer-events: visible;
+}
+
+.pilih-user-opd ul li.pilih-user {
+	height: 20px;
+	line-height: 20px;
+	padding-left: 5px;
+}
+
+.pilih-user-opd ul li:hover {
+	background: white;
+	color: black;
+}
+
+.pilih-user-opd ul li:hover a {
+	color: black;
+}
+
+.pilih-user-opd ul li a {
+	color: white;
+	font-size: 80%;
+}
+
+.form-update-data {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 30%;
+	margin-top: 20px;
+}
+
+.form-update-data p {
+	margin-bottom: 10px;
+}
+
+.form-update-data input,
+.form-update-data select {
+	width: 100%;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid black;
+	padding-left: 5px;
+	margin-bottom: 10px;
+	transition: all 0.5s;
+}
+
+.form-update-data label {
+	align-self: flex-start;
+}
+
+.form-update-data input:focus {
+	box-shadow: 0 2px 2px #a3c8cd;
+}
+
+.form-update-data select {
+	margin-top: 15px;
+}
+
+/* ~~~BAGIAN EDIT USER END*/
+
+/* BAGIAN USER OPD (PENGATURAN) END */
+
+/* BAGIAN FAQ START */
+
+.content-faq {
+	width: 96%;
+	height: 400px;
+	line-height: 30px;
+	background: #062c30;
+	padding-left: 20px;
+	border-radius: 12px;
+}
+
+.judul-faq {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-weight: 700;
+	cursor: pointer;
+	color: white;
+}
+
+.isi-faq {
+	display: none;
+	color: white;
+}
+
+.isi-faq.active {
+	display: block;
+}
+
+.judul-faq i {
+	margin-left: 0;
+}
+
+/* BAGIAN FAQ END */
+/* BAGIAN CONTENT END*/
+
+/* BAGIAN FOOTER START*/
+.footer-for-pagination {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	align-self: center;
+}
+
+.footer-for-pagination span {
+	cursor: default;
+}
+
+.button-pagination {
+	display: flex;
+	padding: 15px 20px;
+	border-radius: 80px;
+	width: 100%;
+}
+
+.button-pagination a {
+	padding: 5px 10px;
+	margin: 5px;
+	color: black;
+	transition: all 0.5s;
+	border-radius: 50px;
+}
+
+.button-pagination .active,
+.button-pagination a:hover,
+.button-pagination strong {
+	background: #46b5d1;
+	border-radius: 50px;
+	color: white;
+	padding: 5px 10px;
+	transition: all 0.5s;
+}
+
+/* BAGIAN FOOTER END*/
+
+/* FORM START */
+.perencanaan-kinerja-container .form-input-dokumen-perencanaan,
+.pelaporan-kinerja-container .form-input-dokumen-pelaporan {
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* .pengukuran-kinerja-container form {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+} */

@@ -1,0 +1,75 @@
+Catatan:::
+
+WRITE YOUR OWN NOTES HERE.
+USING YOUR NAME SIGN, OKAY?.
+ - Name sign1: dynamic.
+ - Name sign2: .
+ - Name sign3: .
+
+
+TARUH DISINI NEH KALO ADA BUG ATO APA.
+--->>>> SECTION[BUG]
+1.
+2. 
+3.
+4. will keep going...
+--->>>> SECTION[SECURITY IS NOT SECURED]
+1. Bagian Autentukasi, pas masuk dengan data user biasa, kita bisa masuk juga sebagai admin tanpa harus autentikasi sebagai admin (cuman dengan ganti url).
+2. Pas X website kong buka ulang tu website, torang bisa langsung maso ke website tanpa autentikasi (cuman ganti url)
+3. 
+4. will keep going...
+
+YANG KURANG:
+1. Di perencanaan admin, belum ada renja, renaksi, cascading kinerja, pohon kinerja, deng crosscutting
+2. Jg lupa di pengukuran user, dpe jenis dokumen ganti dpe tipe input
+
+
+LEVEL URGENT:
+SU: SANGAT URGENT
+LU: LUMAYAN URGENT
+U: URGENT
+BU: BELUM URGENT
+BN: BOLEH NANTI
+
+
+~~~dynamic's note:
+1. Belum ator config, autoload, dan routes (U)
+2. Belum fix itu sidebar menu hover (clear)
+3. Gambar di Home belum ada
+4. Peraturan belum ada (clear)
+5. Kontak belum ada (clear)
+6. Saat user klik menu, itu menu tabuka (clear)
+7. Fitur lihat dropdown(select banyaknya data) konek dengan table (clear mar perlu cari cara lain mo get table)
+8. Fitur cari di table(LU) (belum)
+9. Fitur pagination for table(clear **tidak semua) (SU)
+10. Data table sudah di load pake script (done) (GANTI KE CONTROLLER PLEASE) (**NOT IMPORTANT ANYMORE**)
+11. Data table load pake fetch API (belum dapat tutorial) (**NOT IMPORTANT ANYMORE**)
+12. MIGRASI SAMUA PROSES LOAD DI CONTROLLER (SU) (clear)
+13. MIGRASI SAMUA PROSES DISPLAY KE PHP (SU) (clear)
+14. Tambah sweet alert (BN)
+15. Pengukuran kinerja, dengaan Evaluasi belum jadi -> belum tau bgmna dpe db nnti soalnya ada inputan disitu (for admin)
+16. Evaluasi Kinerja deng pengukuran kinerja cuman pake hard code
+17. Function pengukuran_kinerja deng evaluasi_kinerja di controller admin belum pake pagination dengan blum load dari db
+18. JANGAN DULU KORE YANG PENGATURAN DI ADMIN (BAGIAN PROFIL PENGGUNA DENGAN UBAH EMAIL)
+19. Belum beking yang pas input file dpe label didalam mo taganti sesuai dengan nama file
+20. Status active di sidebar so nda jadi karena d pake tag <a>
+21. Ternyata User perangkat daerah ada menu for Evaluasi (dia mo lia hasil evaluasi dari admin)
+22. Ternyata yang b upload dokumen RPJMD itu BAPEDA bukang instansi pemda (ibu kabag da bilang tgg 1 Des 2022). 
+23. BAGIMANA ITU LOAD DATABASE? DPE CARA SUPAYA BOLEH TTP MO PAKE LIBRARY PAGINATION DARI CODEIGNITER.
+24. will keep going.....
+
+TIPS:
+1. KASE NAMA YANG GAMPANG DIMENGERTI DI SCRIPT ATO DIMANAPUN ITU (hindari singkatan).
+2. KALO MO PAKE PRINT_R NDA PERLU PAKE ECHO
+
+WILL:
+1. Boleh yang dibagian informasi admin dpe pesan itu hanya tampil 5 terbaru jo?
+
+
+
+~~~namesign2's note:
+
+
+~~~namesign3's note:
+
+

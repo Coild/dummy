@@ -1,0 +1,532 @@
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    color: black;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    /* scroll-snap-type: y mandatory;
+    overflow-y: scroll; */
+}
+
+
+/* Navigation Bar Start */
+.navbar {
+    background: transparent;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    transition: all 0.5s;
+}
+
+.navbar.scrolled {
+    background: rgba(6, 44, 48, 0.3);
+    height: 80px;
+    transition: all 0.5s;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    margin-left: 50px;
+    opacity: 1;
+}
+
+.nav-left p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-left p.e,
+.e {
+    color: #46B5D1;
+}
+
+.nav-left p>span,
+.sakip {
+    color: white;
+}
+
+.lambang-pemprov-container {
+    /* position: absolute;
+    left: 40px;
+    top: 100px; */
+    margin-left: 20px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+}
+
+.lambang-pemprov-container img {
+    height: 40px;
+    width: 40px;
+    left: 20px
+}
+
+.lambang-pemprov-container span {
+    background: rgba(355, 355, 355, 0.6);
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.lambang-pemprov-container h5 {
+    font-size: 14px;
+    color: rgba(355, 0, 0, 0.7);
+}
+
+.nav-right {
+    flex: 1;
+    justify-content: space-evenly;
+    opacity: 1;
+}
+
+.nav-right ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex: 1;
+}
+
+.nav-right ul>li.active>a {
+    color: #46B5D1;
+    transition: 0.3 ease color;
+}
+
+.nav-right ul>li>a {
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-right ul>li>a:hover {
+    color: #46B5D1;
+}
+
+.nav-right ul>li.btn-login>a:hover {
+    color: white;
+}
+
+/* Navigation Bar End */
+
+
+
+/* Button Start */
+.btn-login {
+    /* background-color: grey; */
+    width: 11%;
+    height: 30px;
+    border-radius: 10px;
+    border: 2px solid white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+}
+
+.nav-right ul li .btn-login {
+    width: 100%;
+    font-size: 17px;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-login:hover {
+    background-color: #46B5D1;
+}
+
+/* Button End */
+
+
+/* Main content */
+.landing {
+    height: 100vh;
+    width: 100%;
+    background: rgba(6, 44, 48, 0.5);
+    /* scroll-snap-align: start; */
+}
+
+.hidden {
+    opacity: 0;
+    transition: all 1s;
+    transform: translateY(100%);
+    filter: blur(5px);
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+
+.landing.home {
+    background-color: black;
+    position: relative;
+}
+
+
+.landing.home .headline-about h5 {
+    color: white;
+    font-weight: 500;
+    font-size: 28px;
+}
+
+.landing.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.landing h1 {
+    margin-bottom: 30px;
+    color: white;
+    font-size: 30px;
+
+}
+
+.landing h1.sakip-highlight span {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.landing.about p {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    width: 80%;
+}
+
+.landing.regulation {
+    /* padding: 120px 120px; */
+    padding: 100px 90px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.landing.regulation h1 {
+    font-size: 50px;
+    width: 25%;
+    margin: 0;
+}
+
+.landing.regulation p {
+    font-size: 100%;
+    font-weight: 500;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+.landing.regulation p:hover,
+.list-medsos .medsos:hover i,
+.list-medsos .medsos:hover p {
+    margin-left: 10px;
+    cursor: default;
+    /* transition: all 0.5s ease; */
+}
+
+.rincian-regulation {
+    position: absolute;
+    right: 14%;
+    width: 50%;
+    font-size: 15px;
+    top: 80%;
+    color: white;
+    font-style: italic;
+}
+
+
+.landing.contact {
+    height: 80vh;
+    padding-top: 120px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.landing.contact .list-kontak {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.landing.contact .list-kontak .kontak {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    /* align-content: space-between; */
+    /* padding: 60px; */
+    width: 30%;
+    /* background: black; */
+    word-wrap: break-word;
+}
+
+.landing.contact .list-kontak .kontak h5 {
+    font-size: 16px;
+    color: white;
+    font-weight: 300;
+}
+
+
+.kontak .icon-wrapper-kontak {
+    border: 1px solid black;
+    border-radius: 50px;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.landing.contact .list-kontak .kontak img {
+    height: 30px;
+    width: 30px;
+}
+
+
+.strip-login {
+    /* margin-top: 45px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    /* background: rgba(6, 44, 48, 0.8); */
+    background: rgba(6, 44, 48, 0.5);
+    height: 85px;
+}
+
+.strip.btn-login {
+    height: 38px;
+    color: white;
+    font-size: 18px;
+}
+
+.bungkus-strip-login {
+    width: 75%;
+    background: rgba(6, 44, 48, 0.8);
+    border-radius: 35px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 80%;
+}
+
+.bungkus-strip-login>h2 {
+    font-weight: 700;
+    font-size: 16px;
+    color: white;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background: rgba(6, 44, 48, 0.5);
+    height: 20%;
+    font-size: 15px;
+    width: 100%;
+    cursor: default;
+}
+
+.footer-content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 70%;
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+    /* border-radius: 80px; */
+    /* margin-bottom: 20px; */
+    background: rgba(115, 139, 141);
+    transition: all 0.5s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 3px solid rgba(115, 139, 141);
+    border-bottom: none;
+}
+
+.footer-content:hover {
+    /* background: rgba(355, 355, 355, 0.5); */
+    background: rgba(355, 355, 355, 0.2);
+    /* box-shadow: 0px 2px 10px white; */
+    border: 3px solid white;
+    border-bottom: none;
+}
+
+.footer-content .list-medsos {
+    display: flex;
+    justify-content: space-evenly;
+    /* background: white; */
+    width: 90%;
+}
+
+.footer-content h3 {
+    color: white;
+    /* margin-bottom: 15px; */
+}
+
+.footer-content h5 {
+    /* background: white; */
+    display: flex;
+    justify-items: flex-end;
+    /* width: 100%; */
+}
+
+.medsos {
+    display: flex;
+    transition: all 0.5s;
+    /* margin: 5px; */
+}
+
+.medsos p {
+    font-weight: 300;
+}
+
+.medsos .icon-wrapper-medsos {
+    padding-right: 10px;
+}
+
+
+.glass-bg {
+    /* margin: 20px; */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+
+.glass-bg.desc {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin-top: 50px;
+}
+
+.glass-bg.regulation {
+    padding: 10px 20px;
+    width: 70%;
+    height: 55%;
+    /* word-wrap: break-word; */
+    line-height: 30px;
+    letter-spacing: normal;
+    border-radius: 30px;
+    position: absolute;
+    right: 5%;
+    top: 30%;
+}
+
+
+
+
+.bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    /* background: rgba(0, 0, 0, 1); */
+    opacity: 0.7;
+    /* position: absolute; */
+}
+
+.headline-about {
+    position: absolute;
+    z-index: 9;
+    width: 85%;
+    text-align: center;
+    top: 50%;
+    cursor: default;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sakip-highlight {
+    color: white;
+    font-weight: 700;
+    font-size: 45px;
+
+}
+
+
+
+.filler {
+    display: inline-flex;
+    margin-bottom: 30px;
+}
+
+.persegi-panjang {
+    width: 50px;
+    height: 10px;
+}
+
+
+.persegi-panjang.biru {
+    background: #46B5D1;
+}
+
+.persegi-panjang.putih {
+    background: white;
+}
+
+.filler.regulation {
+    position: absolute;
+    width: 60%;
+    height: 80px;
+    left: 8%;
+    /* background: black; */
+}
+
+.persegi-panjang.biru.regulation {
+    width: 600px;
+    height: 20px;
+    top: 0%;
+    /* border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px; */
+    border-radius: 10px;
+}
+
+.persegi-panjang.putih.regulation {
+    width: 600px;
+    height: 20px;
+    /* border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px; */
+    border-radius: 10px;
+    bottom: 8%;
+}
